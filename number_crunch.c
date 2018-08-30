@@ -49,15 +49,23 @@ void possibility_pretty_print(possibility *p) {
 }
 
 int main() {
+  // A possibility to consider
   possibility p = {0};
+
+  // Starter set of numbers
   int set[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
   do {
+    // Set values on the struct
     possibility_init(&p, set);
+
+    // Check to see if it worked out
     if (possibility_valid(&p)) {
+
+      // Print the solution
       possibility_print(&p);
     }
-  } while (next_permutation(set, 10));
+  } while (next_permutation(set, 10)); // Important magic
 
   return 0;
 }
