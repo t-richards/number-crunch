@@ -1,4 +1,5 @@
 all:
+	mkdir -p bin
 	$(CC) -O3 number_crunch.c -o bin/number_crunch
 
 clean:
