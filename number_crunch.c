@@ -45,9 +45,6 @@ int main() {
   possibility p = {0};
 
   // Starter set of numbers
-  // TODO(tom): Use proper permutations
-  // Currently, we take 10 things 10 at a time => 3,628,800 iterations
-  // We should take 10 things 8 at a time => 1,814,400 iterations
   int set[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
   do {

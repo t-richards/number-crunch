@@ -18,18 +18,25 @@
  */
 bool next_permutation(int array[], size_t length) {
   // Find non-increasing suffix
-  if (length == 0)
+  if (length == 0) {
     return false;
+  }
+
   size_t i = length - 1;
-  while (i > 0 && array[i - 1] >= array[i])
+  while (i > 0 && array[i - 1] >= array[i]) {
     i--;
-  if (i == 0)
+  }
+
+  if (i == 0) {
     return false;
+  }
 
   // Find successor to pivot
   size_t j = length - 1;
-  while (array[j] <= array[i - 1])
+  while (array[j] <= array[i - 1]) {
     j--;
+  }
+
   int temp = array[i - 1];
   array[i - 1] = array[j];
   array[j] = temp;
